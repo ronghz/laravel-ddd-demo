@@ -27,6 +27,6 @@ class UserService extends DddAppService
 
     public function callCross()
     {
-        return $this->articleCross->getAll();
+        return $this->articleCross->findAll();
     }
 }

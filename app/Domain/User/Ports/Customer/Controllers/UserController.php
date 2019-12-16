@@ -17,6 +17,6 @@ class UserController extends CustomerController
 
     public function getCross(Request $request)
     {
-        return $this->appService->callCross();
+        return $this->success($this->appService->callCross());
     }
 }

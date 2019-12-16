@@ -1,16 +1,16 @@
 <?php
 namespace Tests\User\Ports\CrossDomain;
 
-use App\Domain\User\Ports\CrossDomain\UserCrossDomain;
+use App\Domain\User\Ports\CrossDomain\UserCross;
 
 class UserCrossDomainTest extends \TestCase
 {
-    /** @var UserCrossDomain */
+    /** @var UserCross */
     private $service;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->service = app(UserCrossDomain::class);
+        $this->service = app(UserCross::class);
     }
 }

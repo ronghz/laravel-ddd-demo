@@ -2,10 +2,10 @@
 
 namespace App\Domain\User\Ports\CrossDomain;
 
-use Ronghz\LaravelDdd\Framework\Base\DddCrossDomain;
+use Ronghz\LaravelDdd\Framework\Base\DddCross;
 use App\Domain\User\Services\UserService;
 
-class UserCrossDomain extends DddCrossDomain
+class UserCross extends DddCross
 {
 
     /** @var UserService */

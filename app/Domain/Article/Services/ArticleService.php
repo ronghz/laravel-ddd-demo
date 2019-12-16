@@ -16,6 +16,11 @@ class ArticleService extends DddDomainService
         return $this->repository->all();
     }
 
+    public function paginate()
+    {
+        return $this->repository->paginate();
+    }
+
     public function findById($id)
     {
         return $this->repository->find($id);

@@ -21,6 +21,11 @@ class ArticleRepository extends DddRepository
         return $this->model->all();
     }
 
+    public function paginate()
+    {
+        return $this->model->paginate();
+    }
+
     public function findPublishedOrderByRecommend()
     {
         return $this->model->with('category.parent')

@@ -1,5 +1,5 @@
 <?php
-namespace App\Domain\Article\Supports\Dtos;
+namespace App\Domain\Article\Dtos;
 
 use Ronghz\LaravelDdd\Framework\Base\DddDto;
 

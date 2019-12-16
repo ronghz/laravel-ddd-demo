@@ -2,10 +2,12 @@
 
 namespace App\Domain\Article\Ports\Customer\Controllers;
 
+use App\Domain\Article\Models\Article;
 use App\Domain\Article\Ports\Customer\Request\ArticleGetShowRequest;
 use App\Supports\BaseController\CustomerController;
 use App\Domain\Article\Services\ArticleService as DomainService;
 use App\Domain\Article\Ports\Customer\Services\ArticleService as AppService;
+use Flugg\Responder\Facades\Responder;
 use Illuminate\Http\Request;
 
 class ArticleController extends CustomerController
@@ -18,7 +20,10 @@ class ArticleController extends CustomerController
 
     public function getRecommended()
     {
-        return $this->success($this->appService->findPublishedOrderByRecommend());
+//        return responder()->success(Article::all())->respond();
+        return Responder::success(Article::paginate())->respond();
+//        return ResponseBuilder::success(Article::paginate());
+        return $this->success(Article::paginate());
     }
 
     public function getShow(ArticleGetShowRequest $request)
